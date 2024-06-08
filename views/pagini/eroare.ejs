@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site-ul este creat pentru comercializarea produselor de patiserie. Facem si turte de nunta sau de botez, dar si prescuri pentru parastase si inmormantare. La comenzi de peste 50 ron, livrarea este gratuita. (la domiciliul dvs.)">
+    <meta name="keywords" content="patiserie, covrigi, gogoși, scovergi, briose, pâine, cozonaci, plăcinte, merdenele, ștrudele, turte de nuntă și de botez, japoneze, capete, prescuri.">
+    <title>Patiseria Miruna - eroare</title>
+    <link rel="stylesheet" type="text/css" href="/Resurse/css/eroare.css">
+    <%- include("../fragmente/head.ejs"); %>
+</head>
+<body>
+    <%- include("../fragmente/header.ejs"); %>
+    <main>
+        <div id="err-coloane">
+            <div id="err-imag">
+                <img src="<%- locals.imagine %>" alt="Eroare">
+            </div>
+            <section>
+                <h2><%- locals.titlu %></h2>
+                <p><%- locals.text %></p>
+            </section>
+        </div>
+    </main>
+    <%- include("../fragmente/footer.ejs"); %>
+</body>
+</html>
