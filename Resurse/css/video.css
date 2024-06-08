@@ -1,0 +1,20 @@
+#video {
+  width: 100%;
+  max-width: 800px;
+  min-width: 300px;
+}
+
+video::cue {
+  background: linear-gradient(to right, #000, #333);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+video::cue(c[1]) {
+  background: linear-gradient(to right, #222, #555);
+}
+
+video::cue(c[2]) {
+  background: linear-gradient(to right, #444, #777);
+}

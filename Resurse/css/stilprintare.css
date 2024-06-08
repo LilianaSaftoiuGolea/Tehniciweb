@@ -1,0 +1,99 @@
+
+/* Stiluri ptr. printare */
+@media print {
+    .grid-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 5px;
+		column-gap: 0px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .grid-container > * {
+        max-width: 90%;
+    }
+
+    #banner {
+        position: relative;
+        bottom: 10px;
+        text-align: center;
+        width: 70%;
+        border: 4px solid var(--negru) inset;
+    }
+
+    /* Imaginile, videoclipurile, iframe-urile sunt ascunse. Link-ul către începutul paginii ascuns */
+    img, video, iframe, a[href="#"] {
+        display: none !important;
+    }
+
+    .calendar {
+        display: block;
+    }
+
+    /* Pe fiecare pagină va exista un watermark care va conține numele vostru. */
+    .watermark {
+        position: fixed;
+        bottom: 5%;
+        right: 0%;
+        display: block;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid var(--negru);
+        border-radius: 15%;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.4;
+    }
+
+    /* Toate link-urile din pagină se afișeaza ca text normal. */
+    a {
+        text-decoration: none !important;
+        color: var(--negru) !important;
+    }
+
+    /* Headingul de nivel 1, cu titlu site-ului, pe prima pagină, centrat pe orizontală. Sub el meniul sub formă de listă neordonată cu elementele unele sub altele. După meniu este un page break. Inaintea footerului, este un page break */
+    header {
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    /* Page break după meniu și înainte de footer */
+    nav {
+        page-break-after: always;
+    }
+    footer {
+        page-break-before: always;
+    }
+
+
+    /* La printare, paginile din stânga (în print preview) au marginea în stânga de 3cm și marginea în dreapta de 1cm, iar cele din dreapta au marginea în dreapta de 3cm și 1cm în stânga. */
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 3cm;
+    }
+}
+
+
+		
+
+
+
+
+

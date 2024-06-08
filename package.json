@@ -1,0 +1,48 @@
+{
+  "name": "patiserie",
+  "version": "1.0.0",
+  "description": "patiserie - magazin virtual",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "patiserie",
+    "covrigi",
+    "gogoși",
+    "scovergi",
+    "pâine",
+    "cozonaci",
+    "plăcinte",
+    "merdenele",
+    "ștrudele",
+    "briose",
+    "turte",
+    "de",
+    "nuntă",
+    "și",
+    "de",
+    "botez",
+    "japoneze",
+    "capete",
+    "prescuri",
+    "produse",
+    "proaspete",
+    "și",
+    "de",
+    "calitate."
+  ],
+  "author": "Liliana Saftoiu Golea",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "css": "^3.0.0",
+    "ejs": "^3.1.10",
+    "expres": "^0.0.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3",
+    "path": "^0.12.7",
+    "sass": "^1.77.4",
+    "scss": "^0.2.4"
+  }
+}

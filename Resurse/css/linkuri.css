@@ -1,0 +1,55 @@
+/* Setăm culoarea linkurilor vizitate */
+a:visited {
+  color: var(--visited-link-color);
+}
+
+/* Setăm stilul pentru linkurile externe */
+a[href^="http"] {
+  position: relative;
+}
+
+/* Generăm simbolul pentru linkurile externe */
+a[href^="http"]::before {
+  content: "⮳";
+  font-size: 150%; /* Font size cu 50% mai mare */
+  position: absolute;
+  left: -1.2em;
+  transition: color 0.3s ease;
+}
+
+/* Schimbăm culoarea simbolului când se plasează cursorul peste linkuri externe */
+a[href^="http"]:hover::before {
+  color: var(--external-link-hover-color);
+}
+
+/* Adăugăm efectul de hover pentru linkurile din conținutul paginii */
+main a {
+  position: relative;
+  display: inline-block;
+}
+
+/* Generăm efectul de păta de culoare pentru hover */
+main a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-image: radial-gradient(circle, var(--color-c1) 0%, var(--color-c1) 40%, transparent 80%, transparent 100%);
+  background-position: center;
+  background-size: 0;
+  transition: background-size 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Efectul de pata de culoare se activează la plasarea cursorului peste link */
+main a:hover::after {
+  background-size: 200%; /* Creștem dimensiunea până la 200% */
+}
+
+/* Stil pentru linkurile active (după ce sunt apăsate) */
+a:active {
+  outline: 2px solid var(--link-active-border-color);
+}

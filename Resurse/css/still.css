@@ -1,0 +1,277 @@
+body {
+    overflow-x: hidden;
+    transition: all 0.5s linear;
+    --marime-text: 17px;
+    --dim-spatiere:100px;
+    --culoare1: #FA9100;
+    --text: #FA6600;
+    --text2: skyblue;
+    --highlight: #FAB000; 
+    --border: #FA3A00;
+    --background: #FACE00;
+    --alb: white;
+    --negru: black;
+    --main-padding: 50px; 
+    background-color: var(--background);
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: var(--main-padding);
+    font-size: var(--marime-text);
+}
+
+h1 { 
+    color: var(--alb);
+}
+
+h2 {
+    color: var(--text);
+    border: 2px solid var(--border);
+}
+
+h3 {
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'unu    unu    unu    unu   '
+        'opt    opt    opt    opt   '
+        'trei   doi    doi    patru '
+        'cinci  sase   sapte  sapte '
+        'footer footer footer footer'
+    ;
+    grid-gap: 5px;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    padding: 5px;
+}
+
+.spinner, .spinner * {
+    z-index: 1 !important;
+}
+
+.linkuri-iframe {
+    display: flex;
+}
+
+.linkuri-iframe span > a {
+    display: block;
+    border-top: 5px solid var(--border);
+    border-bottom: 5px solid var(--border);
+    border-left: 10px solid var(--border);
+    margin-bottom: 0.1em;
+    height: 2em;
+    width: 7em;
+    text-align: center;
+    border-radius: 15% 0 0 15%;
+    color: var(--negru);
+    font-weight: bolder;
+    padding-top: 15px;
+}
+
+.linkuri-iframe span > a:hover {
+    color: var(--alb);
+    background-color: var(--border);
+}
+
+iframe {
+    max-width: 100%;
+    border: 10px inset var(--border);
+}
+
+.header { 
+    grid-area: header; 
+    background-color: var(--culoare1);
+}
+
+.prezentare {
+    grid-area: unu; 
+    border-style: dashed;
+}
+
+.diverse { 
+    grid-area: opt; 
+    border-radius: 20px;
+}
+
+.calendar { 
+    grid-area: trei; 
+}
+.tabel { 
+    grid-area: doi;
+    background-color: var(--background);
+}
+.anunturi { 
+    grid-area: patru; 
+}
+.useri-activi {
+    grid-area: cinci; 
+    background-color: var(--background);
+}
+.lista-useri { 
+    grid-area: sase; 
+}
+.despre-site { 
+    grid-area: sapte; 
+    background-color: var(--background);
+}
+.utile { 
+    grid-area: footer;
+}
+
+.utile > p {
+    border: 1px solid; 
+    padding: 10px; 
+    box-shadow: 5px 10px rgba(0,0,0,0.5);
+}
+
+.grid-container > div {
+    padding: 10px 10px;
+}
+
+table, tr, th {
+    border: 1px solid var(--border);
+    border-spacing: 5px;
+}
+
+tbody > tr:nth-child(2n+1), tfoot tr {
+    color: var(--alb);
+    background-color: var(--culoare1);
+}
+
+table caption {
+    caption-side: bottom;
+}
+
+tbody tr:hover, tfoot tr:hover {
+    background-color: var(--negru);
+    transition: background-color 2s ease;
+}
+
+p {
+    color: white;
+    background-color: var(--culoare1);
+}
+
+li {
+    color:var(--culoare1);
+}
+
+.copyright {
+    text-align: center; 
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+#link-top{
+  position:fixed;
+  bottom:0.3em;
+  opacity:0.5;
+  left:3em;
+  width:3rem;
+  box-sizing: border-box;
+  height:3rem;
+  line-height:3rem;
+  text-align:center;
+  border:5px solid grey;
+  /*border-radius:100%;*/
+  rotate: 45deg;
+  /*background: rgb(220,220,220);*/
+}
+
+#link-top:hover{
+  opacity:1;
+  background: grey;
+  .label { opacity: 100%; }
+}
+
+#triunghi{
+  height:0px;
+  width:0;
+  /*display:inline-block;*/
+  border-bottom:2rem solid grey;
+  border-left:1rem solid transparent;
+  border-right:1rem solid transparent;
+  vertical-align: top;
+  transform: translateY(0%);
+  rotate: -45deg;
+}
+
+#triunghi:hover{
+  opacity:1;
+  border-bottom:2rem solid white;
+}
+
+.label { display: block; color: var(--culoare4); opacity: 0; rotate: -45deg; }
+
+.watermark {
+    display: none;
+}
+
+@media screen and (max-width:1200px){
+    body {
+        --marime-text: 16px;
+        --main-padding: 10px; 
+        border-spacing: 0;
+    }
+    .grid-container {
+        grid-template-areas:
+            'header header'
+            'unu    unu   '
+            'opt    opt   '
+            'trei   doi   '  
+            'patru  cinci '
+            'sase   sapte '
+            'footer footer'
+        ;
+    }
+}
+
+@media screen and (max-width:800px){
+    body {
+        --marime-text: 14px;
+        --main-padding: 25px;
+        animation: none;
+    }
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'unu   '
+            'opt   '
+            'trei  '
+            'doi   '  
+            'patru '
+            'cinci '
+            'sase  '
+            'sapte '
+            'footer'
+        ;
+        grid-gap: 5px;
+        background-color: var(--background);
+        border: 2px solid var(--border);
+        padding: 5px;
+    }
+
+    table, tr, th {
+        border-spacing: 0;
+    }
+
+    table {
+        width: 800px;
+    }
+
+    .tabel {
+        overflow-x: auto !important;
+    }
+}
+

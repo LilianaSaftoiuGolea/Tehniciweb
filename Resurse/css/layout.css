@@ -1,0 +1,36 @@
+.header { grid-area: header; }
+.prezentare { grid-area: unu; }
+#welcome { grid-area: opt; }
+.anunturi { grid-area: trei; }
+.tabel { grid-area: doi; }
+.calendar { grid-area: patru; }
+.useri-activi { grid-area: cinci; }
+.lista-useri { grid-area: șase; }
+.despre-site { grid-area: șapte; }
+.utile { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'unu    unu    unu    unu   '
+    'opt    opt    opt    opt   '
+    'trei   doi    doi    patru '
+    'cinci  șase   șapte  șapte '
+    'footer footer footer footer'
+  ;
+  gap: 5px;
+  background-color: var(--culoare4);
+  border: 2px solid var(--culoare1);
+  padding: 5px;
+}
+.grid-container > div {
+  background-color: var(--culoare5);
+  padding: 10px 10px;
+}
+
+table, tr, th {
+    border: 1px solid var(--culoare3);
+    /*border-collapse: collapse;*/
+    border-spacing: 5px;
+}

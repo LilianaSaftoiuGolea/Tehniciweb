@@ -1,0 +1,31 @@
+{
+    "cale_baza": "/Resurse/Image/erori",
+    "eroare_default": {
+        "titlu": "404 - Eroare!",
+        "text": "A survenit o eroare.",
+        "imagine": "interzis.png"
+    },
+    "info_erori": [
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "404 - Nu avem!",
+            "text": "Nu se gaseste pe acest server.",
+            "imagine": "lupa.png"
+        },
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "403 - Esti interesat de vreun produs?",
+            "text": "Ai greșit site-ul.",
+            "imagine": "interzis.png"
+        },
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "400 - Bad Request",
+            "text": "Cerere gresita",
+            "imagine": "interzis.png"
+        }
+    ]
+}

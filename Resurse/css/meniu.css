@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.meniu {
+  height: 3rem;
+  background-color: var(--border);
+  padding: 0;
+}
+.meniu li {
+  list-style-type: none;
+}
+.meniu .hamburger {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.meniu .hamburger div {
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+.meniu #burger-input {
+  margin: 0;
+  padding: 0;
+  display: none !important;
+}
+.meniu .menu-item {
+  display: inline-block;
+  width: 7.5rem;
+  height: 0.97rem;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.5s linear;
+}
+.meniu .menu-item a {
+  display: block;
+  text-decoration: none;
+  color: var(--alb);
+  width: 100%;
+}
+.meniu .menu-item .submeniu {
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.7s;
+  background-color: var(--border);
+  width: 7.5rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.8rem;
+  text-align: center;
+  z-index: 10;
+}
+.meniu .menu-item .submeniu li {
+  display: block;
+  margin: 0;
+  padding: 0.2rem;
+  padding-left: 3.5rem;
+  margin-top: 0.5rem;
+}
+.meniu .menu-item .submeniu li a::before {
+  content: "→";
+  position: absolute;
+  left: -3rem;
+}
+.meniu .menu-item .submeniu li:hover a::before {
+  animation: submeniu 0.5s forwards;
+}
+.meniu .menu-item:hover {
+  box-shadow: 0 0 1.4rem var(--alb) inset;
+}
+.meniu .menu-item:hover .submeniu {
+  transform: scaleY(1);
+}
+.meniu .menu-item:hover .submeniu li {
+  display: block;
+}
+
+#casuta {
+  z-index: 10;
+}
+
+@keyframes submeniu {
+  0% {
+    left: 0.6rem;
+    transform: scaleX(3.5) scaleY(1.4);
+  }
+  100% {
+    left: 1.9rem;
+    transform: scaleX(3.5) scaleY(1.4);
+  }
+}
+@media screen and (max-width: 1200px) {
+  #casuta + em {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu-list {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  .hamburger {
+    display: block !important;
+    height: 100%;
+    color: var(--alb);
+  }
+  #burger-input:checked ~ .menu-list {
+    display: block;
+    background-color: var(--border);
+    transform: scaleY(1) scaleX(1);
+  }
+  #burger-input:checked ~ .menu-list .menu-item {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 3rem;
+    display: block;
+  }
+  #burger-input:checked ~ .menu-list .menu-item a {
+    padding-top: 1rem;
+  }
+  #burger-input:checked ~ .menu-list .menu-item .submeniu {
+    width: 100%;
+  }
+  #burger-input:checked ~ .menu-list .menu-item .submeniu li {
+    padding-top: 0rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0;
+    margin: 0;
+  }
+  #burger-input:checked ~ .menu-list .menu-item .submeniu li a::before {
+    display: none;
+  }
+  #burger-input:checked ~ .menu-list .menu-item .submeniu li:hover {
+    box-shadow: 0 0 1.4rem var(--alb) inset;
+  }
+}
+
+/*# sourceMappingURL=meniu.css.map */
